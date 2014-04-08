@@ -1,0 +1,23 @@
+<div class="page-header">
+  <h1>Todos os Quartos</h1>
+ </div>
+ 
+ <%= link_to "Incluir um novo quarto", new_quarto_path, class: "btn btn-success" %>
+
+<% @quartos.each do |quarto| %>
+<div class="quarto">
+  <strong> <%= quarto.nome %> </strong>
+  <p> <%= quarto.descricao %> </p>
+
+  <div class="meta">
+    <%= link_to "Visualizar", quarto %>
+
+    <span class="admin">
+      <%= link_to "Editar", edit_quarto_path(quarto) %> |
+      <%= link_to "Apagar", quarto, method: :delete, data: {confirm: "Realmente deseja apagar este quarto?"} %>
+    </span>
+  </div>
+
+</div>
+<% end %> 
+

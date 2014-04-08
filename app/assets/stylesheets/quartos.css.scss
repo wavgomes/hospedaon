@@ -1,0 +1,25 @@
+// Place all the styles related to the quartos controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.quarto {
+	border-bottom: solid 2px #CCC;
+	padding: 5px 0;
+}
+
+.quarto p {
+	margin: 4px 0;
+}
+
+.quarto.hover {
+	background: #FAFAFA;	
+}
+
+.quarto .admin {
+	display: none;
+}
+
+.quarto.hover .admin {
+	display: inline;
+}
